@@ -55,7 +55,22 @@ describe("Game", () => {
     expect(game.state.history).to.eql([4,3,0])
   })
 
-  
+  it("can alternate moves, X first", () => {
+    let board = scryRenderedDOMComponentsWithClass(game, 'board')
+
+    let center = board[0].childNodes[4]
+    let midLeft = board[0].childNodes[3]
+    let topLeft = board[0].childNodes[0]
+
+    Simulate.click(center)
+    Simulate.click(midLeft)
+    Simulate.click(topLeft)
+
+    expect(center.innerHTML).to.equal('x')
+    expect(midLeft.innerHTML).to.equal('o')
+    expect(topLeft.innerHTML).to.equal('x')
+  })
+
 
   describe("board", () => {
     it("has nine squares", () => {

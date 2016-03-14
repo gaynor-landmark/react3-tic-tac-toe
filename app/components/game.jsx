@@ -1,6 +1,15 @@
 import React, { Component } from 'react'
 
-import { addIndex, append, map } from 'ramda'
+import {
+  addIndex,
+  append,
+  curry,
+  indexOf,
+  map,
+  reduce,
+  repeat,
+  update
+} from 'ramda'
 
 import Square from './square.jsx!'
 
@@ -18,11 +27,29 @@ class Game extends Component {
     this.setState({ history: append(square, this.state.history) })
   }
 
-  // UPDATED
+  getPlayer (move, history) {
+    return (indexOf(move, history) % 2 === 0) ? 'x' : 'o'
+  }
+
+  makeMove (history, memo, move) {
+    const player = this.getPlayer(move, history)
+
+    return update(move, player, memo)
+  }
+
+  getBoard (history) {
+    const move = curry(this.makeMove.bind(this))
+    const memo = repeat(false, 9)
+
+    return reduce(move(history), memo, history)
+  }
+
   render () {
-    const squares = mapIndexed((_, i) => {
-      return <Square key={i} clickCb={this.handleClick.bind(this, i)}/>
-    }, new Array(9))
+    const squares = mapIndexed((val, idx) => {
+      return val ?
+        <Square key={idx} player={val}/> :
+        <Square key={idx} clickCb={this.handleClick.bind(this, idx)}/>
+    }, this.getBoard(this.state.history))
 
     return <div className="board">{squares}</div>
   }
