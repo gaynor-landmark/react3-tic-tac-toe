@@ -1,0 +1,1 @@
+module.exports = require("npm:babel-preset-stage-3@6.5.0/index.js");

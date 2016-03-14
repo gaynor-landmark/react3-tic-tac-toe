@@ -1,0 +1,1 @@
+module.exports = require("npm:babel-helper-remap-async-to-generator@6.7.0/lib/index.js");

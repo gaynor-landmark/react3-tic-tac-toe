@@ -1,0 +1,1 @@
+module.exports = require("npm:react-redux@4.4.1/lib/index.js");

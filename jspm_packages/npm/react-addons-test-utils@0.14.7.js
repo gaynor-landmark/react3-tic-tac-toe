@@ -1,0 +1,1 @@
+module.exports = require("npm:react-addons-test-utils@0.14.7/index.js");

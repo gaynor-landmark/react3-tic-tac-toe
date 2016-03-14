@@ -1,0 +1,1 @@
+module.exports = require("npm:babel-plugin-transform-es2015-unicode-regex@6.5.0/lib/index.js");

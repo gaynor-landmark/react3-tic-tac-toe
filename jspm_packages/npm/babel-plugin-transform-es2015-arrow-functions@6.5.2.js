@@ -1,0 +1,1 @@
+module.exports = require("npm:babel-plugin-transform-es2015-arrow-functions@6.5.2/lib/index.js");

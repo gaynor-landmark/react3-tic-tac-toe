@@ -1,0 +1,1 @@
+module.exports = require("npm:babel-helper-replace-supers@6.7.0/lib/index.js");

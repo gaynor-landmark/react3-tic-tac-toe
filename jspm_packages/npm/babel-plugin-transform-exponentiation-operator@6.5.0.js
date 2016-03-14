@@ -1,0 +1,1 @@
+module.exports = require("npm:babel-plugin-transform-exponentiation-operator@6.5.0/lib/index.js");

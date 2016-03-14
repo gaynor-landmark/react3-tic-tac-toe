@@ -1,0 +1,1 @@
+module.exports = require("npm:babel-helper-regex@6.6.5/lib/index.js");

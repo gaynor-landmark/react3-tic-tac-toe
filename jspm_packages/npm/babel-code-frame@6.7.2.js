@@ -1,0 +1,1 @@
+module.exports = require("npm:babel-code-frame@6.7.2/lib/index.js");

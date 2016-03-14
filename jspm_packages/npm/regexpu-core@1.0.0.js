@@ -1,0 +1,1 @@
+module.exports = require("npm:regexpu-core@1.0.0/rewrite-pattern.js");

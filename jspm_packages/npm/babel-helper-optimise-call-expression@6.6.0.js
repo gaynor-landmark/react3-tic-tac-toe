@@ -1,0 +1,1 @@
+module.exports = require("npm:babel-helper-optimise-call-expression@6.6.0/lib/index.js");

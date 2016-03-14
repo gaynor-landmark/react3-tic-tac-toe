@@ -1,0 +1,1 @@
+module.exports = require("npm:babel-plugin-transform-flow-strip-types@6.7.0/lib/index.js");

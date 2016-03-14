@@ -1,0 +1,1 @@
+module.exports = require("npm:babel-plugin-transform-es2015-block-scoping@6.7.1/lib/index.js");
